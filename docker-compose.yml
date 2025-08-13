@@ -5,7 +5,7 @@ services:
     build:
       context: ./backend # Docker will look in the backend folder for the Dockerfile to build this image.
     ports:
-      - "5001:5001"
+      - "5002:5002"
     environment:
       # - MONGO_URI=mongodb://mongo:27017/BlogApp
       # - MONGO_URI=${MONGO_URI}
@@ -20,11 +20,11 @@ services:
     build:
       context: ./frontend
     ports:
-      - "5173:5173"     # map same port for Vite dev server
+      - "5173:5173" # map same port for Vite dev server
     volumes:
       - ./frontend:/app # mount local code into container for hot reload
       - /app/node_modules # prevent overwriting node_modules from host
-    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+    command: [ "npm", "run", "dev", "--", "--host", "0.0.0.0" ]
     restart: always
 
   mongo:

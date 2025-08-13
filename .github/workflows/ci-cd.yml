@@ -16,7 +16,7 @@ jobs:
     # First, it copies your code from the GitHub repo to the runner, so the runner can work with your files.
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 # it tells github that checkout to the current branch. 
     
       # Next, it logs in to Docker Hub using your credentials stored securely as GitHub secrets. This is needed so the runner can push your Docker images to Docker Hub.
       - name: Log in to Docker Hub
