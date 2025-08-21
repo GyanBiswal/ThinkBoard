@@ -41,6 +41,14 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
+else {
+  // production: allow Vercel frontend
+  app.use(
+    cors({
+      origin: "https://your-app.vercel.app", // <- replace with your actual Vercel URL
+    })
+  );
+}
 
 connectDB().then(() => {
   app.listen(PORT, () => {
