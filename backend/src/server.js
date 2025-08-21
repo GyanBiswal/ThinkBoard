@@ -45,7 +45,7 @@ else {
   // production: allow Vercel frontend
   app.use(
     cors({
-      origin: "https://your-app.vercel.app", // <- replace with your actual Vercel URL
+      origin: "https://think-board-six.vercel.app/", 
     })
   );
 }
