@@ -45,7 +45,7 @@ else {
   // production: allow Vercel frontend
   app.use(
     cors({
-      origin: "https://think-board-six.vercel.app/", 
+      origin: "https://think-board-qsgl21iop-gyan-biswals-projects.vercel.app/", 
     })
   );
 }
